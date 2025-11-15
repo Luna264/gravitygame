@@ -1,6 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bnq3qotn1rkul"]
+[gd_scene load_steps=9 format=3 uid="uid://bnq3qotn1rkul"]
 
 [ext_resource type="Texture2D" uid="uid://bujdnsoq255ln" path="res://temp drone/Walk.png" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://hv7bvlsfs8xd" path="res://potatoes.jpg" id="2_epypp"]
+[ext_resource type="Script" uid="uid://coomw7ewnv4y3" path="res://square_bg.gd" id="3_0hol4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0e48y"]
 atlas = ExtResource("1_wtcfe")
@@ -38,14 +40,22 @@ animations = [{
 "speed": 8.0
 }]
 
-[node name="gravity flip" type="Node2D"]
+[node name="gravityflip" type="Node2D"]
 
 [node name="drone" type="Node2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="drone"]
 texture_filter = 1
-position = Vector2(571, 306)
+position = Vector2(1086, 363)
 sprite_frames = SubResource("SpriteFrames_kdubu")
 animation = &"walk"
 frame = 3
 frame_progress = 0.39870358
+
+[node name="level" type="Node2D" parent="."]
+
+[node name="square bg" type="Sprite2D" parent="level"]
+position = Vector2(590, 311)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_epypp")
+script = ExtResource("3_0hol4")
