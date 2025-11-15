@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bnq3qotn1rkul"]
+
+[ext_resource type="Texture2D" uid="uid://hv7bvlsfs8xd" path="res://potatoes.jpg" id="2_epypp"]
+[ext_resource type="Script" uid="uid://coomw7ewnv4y3" path="res://square_bg.gd" id="3_0hol4"]
+[ext_resource type="PackedScene" uid="uid://cyokgrcsw1k4r" path="res://temp drone/drone.tscn" id="3_epypp"]
+
+[node name="gravityflip" type="Node2D"]
+
+[node name="level" type="Node2D" parent="."]
+
+[node name="square bg" type="Sprite2D" parent="level"]
+position = Vector2(539, 299.00003)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_epypp")
+script = ExtResource("3_0hol4")
+
+[node name="drone" parent="." instance=ExtResource("3_epypp")]
+position = Vector2(967, 275)
