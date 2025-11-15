@@ -4,7 +4,7 @@ extends CharacterBody2D
 
 func rotate_left():
 	var tween = create_tween()
-	tween.tween_property(self, "rotation_degrees", 270, 0.3)
+	tween.tween_property(self, "rotation_degrees", -90, 0.3)
 
 func rotate_right():
 	var tween = create_tween()
@@ -21,7 +21,7 @@ func rotate_up():
 
 func _physics_process(delta):
 	var direction = Vector2.UP.rotated(rotation)
-	velocity = direction * -100
+	velocity = direction * -500
 	if Input.is_action_just_pressed("gravLeft"):
 		rotate_left()
 	if Input.is_action_just_pressed("gravRight"):
