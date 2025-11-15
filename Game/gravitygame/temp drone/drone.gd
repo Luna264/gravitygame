@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var drone: CharacterBody2D = $"."
+
 
 func rotate_left():
 	var tween = create_tween()
