@@ -1,13 +1,15 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1763216651
-AAAAA.tscn::PackedScene::-1::1763214185::0::1::::<><><>0<>0<><>::
+::res://::1763243912
+1.png::CompressedTexture2D::763704030769000860::1763243912::1763243912::1::::<><><>0<>0<>fd367fcd1d2c13e08bfd6935ca4f43f2<>res://.godot/imported/1.png-515c813a180ba5fd2e61c8e75c4cac47.ctex::
+AAAAA.tscn::PackedScene::2600739484733931387::1763221554::0::1::::<><><>0<>0<><>::
+ameera_drone_test.tscn::PackedScene::3848143275347042958::1763228797::0::1::::<><><>0<>0<><>::uid://ccuysms5rhg1t::::res://temp drone/drone.tscn
 icon.svg::CompressedTexture2D::2202744499288637416::1763214171::1763214185::1::::<><><>0<>0<>ed836d1996fb3c6e93d63e1ec8d45d69<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-node_2d.gd::GDScript::1248117965186074898::1763214171::0::1::::<>Node2D<><>0<>0<><>::
-node_2d.tscn::PackedScene::8665123735477687363::1763215817::0::1::::<><><>0<>0<><>::uid://r1uk5sjryyra::::res://node_2d.gd<>uid://bujdnsoq255ln::::res://temp drone/Walk.png<>uid://hv7bvlsfs8xd::::res://potatoes.jpg<>uid://coomw7ewnv4y3::::res://square_bg.gd
+node_2d.gd::GDScript::1248117965186074898::1763223779::0::1::::<>Node2D<><>0<>0<><>::
+node_2d.tscn::PackedScene::8665123735477687363::1763242524::0::1::::<><><>0<>0<><>::uid://r1uk5sjryyra::::res://node_2d.gd<>uid://hv7bvlsfs8xd::::res://potatoes.jpg<>uid://bu3cmfkepqp4i::::res://ameera_drone_test.tscn<>uid://b2legxs3pwddr::::res://tileset_sf.png
 potatoes.jpg::CompressedTexture2D::536619688672381045::1763214171::1763214187::1::::<><><>0<>0<>7a280f04fe767708bf60168308fb9e81<>res://.godot/imported/potatoes.jpg-56ff810757ddcef927196e2a6ea8759b.ctex::
 README.md::TextFile::-1::1763214171::0::1::::<><><>0<>0<><>::
 Test.tscn::PackedScene::7167446276403867319::1763215823::0::1::::<><><>0<>0<><>::uid://6na46muka5nw::::res://icon.svg
-square_bg.gd::GDScript::5785156046198831352::1763214171::0::1::::<>Sprite2D<><>0<>0<><>::
+square_bg.gd::GDScript::5785156046198831352::1763218122::0::1::::<>CharacterBody2D<><>0<>0<><>::
 tileset_sf.png::CompressedTexture2D::4304482437085766179::1763216651::1763216652::1::::<><><>0<>0<>10a9465fb73c2e941dba7a6f2fb3f6b3<>res://.godot/imported/tileset_sf.png-77c03c8b154d3ca780861d3f140bb527.ctex::
 ::res://addons/::1763214171
 ::res://addons/godot_super-wakatime/::1763214171
@@ -22,9 +24,10 @@ utils.gd::GDScript::5251015809120159908::1763214171::0::1::::<>RefCounted<><>0<>
 godotwaka2.png::CompressedTexture2D::7026850610005011835::1763214171::1763214171::1::::<><><>0<>0<>46217c9c5839b2c9f7217cd3af6b8860<>res://.godot/imported/godotwaka2.png-7d3d010fb4adc0d433467ab1cc4754ed.ctex::
 godotwaka.png::CompressedTexture2D::7932361111412089001::1763214171::1763214171::1::::<><><>0<>0<>7360cc7c44aafc955def6087604c985e<>res://.godot/imported/godotwaka.png-ef0518417b4f997d237759e5551dd05d.ctex::
 icon.jpg::CompressedTexture2D::3122668444336440389::1763214171::1763214171::1::::<><><>0<>0<>3d1d80fd4049890345f07c1608fe4e66<>res://.godot/imported/icon.jpg-64f68b30ea939aa8019167e67dffb2db.ctex::
-::res://temp drone/::1763216628
+::res://temp drone/::1763228832
 Death.png::CompressedTexture2D::4249031801554040980::1763214171::1763214185::1::::<><><>0<>0<>5d231f6d73f8b4e0d86ce2c36a8384e1<>res://.godot/imported/Death.png-eed97389f3a00d6b58a3ba956c40c358.ctex::
-drone.tscn::PackedScene::-1::1763216207::0::1::::<><><>0<>0<><>::
+drone.gd::GDScript::7752322075392861780::1763223827::0::1::::<>CharacterBody2D<><>0<>0<><>::
+drone.tscn::PackedScene::4955996621332890279::1763228832::0::1::::<><><>0<>0<><>::uid://dipju2ohhhl2k::::res://temp drone/drone.gd<>uid://bujdnsoq255ln::::res://temp drone/Walk.png
 Idle.png::CompressedTexture2D::3645408249586048466::1763214171::1763214185::1::::<><><>0<>0<>81d1a5acf0a00138127fa52492962f90<>res://.godot/imported/Idle.png-e6d3c4f190f9f4ce1779dad7649f3afd.ctex::
 Landing.png::CompressedTexture2D::7523056984467945008::1763214171::1763214185::1::::<><><>0<>0<>9b736443c44993bc240749d66a35e172<>res://.godot/imported/Landing.png-315b1f08efd49f0d8f525e82bbe8e722.ctex::
 tileset_sf.png::CompressedTexture2D::7249861873967570148::1763216627::1763216628::1::::<><><>0<>0<>19d25ac59b2380e4ddbfc7078fa888ed<>res://.godot/imported/tileset_sf.png-ee4acc05e5372f8661d3ac463c448c3d.ctex::
