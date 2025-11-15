@@ -1,12 +1,14 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1763209598
+::res://::1763212813
 AAAAA.tscn::PackedScene::-1::1763189018::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D::2202744499288637416::1763188382::1763188382::1::::<><><>0<>0<>ed836d1996fb3c6e93d63e1ec8d45d69<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-node_2d.tscn::PackedScene::3333635108856689379::1763209287::0::1::::<><><>0<>0<><>::uid://bujdnsoq255ln::::res://temp drone/Walk.png<>uid://hv7bvlsfs8xd::::res://potatoes.jpg<>uid://coomw7ewnv4y3::::res://square_bg.gd
+node_2d.tscn::PackedScene::3333635108856689379::1763211367::0::1::::<><><>0<>0<><>::uid://r1uk5sjryyra::::res://node_2d.gd<>uid://bujdnsoq255ln::::res://temp drone/Walk.png<>uid://hv7bvlsfs8xd::::res://potatoes.jpg<>uid://coomw7ewnv4y3::::res://square_bg.gd
 potatoes.jpg::CompressedTexture2D::536619688672381045::1763209092::1763209093::1::::<><><>0<>0<>7a280f04fe767708bf60168308fb9e81<>res://.godot/imported/potatoes.jpg-56ff810757ddcef927196e2a6ea8759b.ctex::
 README.md::TextFile::-1::1763188382::0::1::::<><><>0<>0<><>::
-square_bg.gd::GDScript::5785156046198831352::1763209457::0::1::::<>Sprite2D<><>0<>0<><>::
+node_2d.gd::GDScript::1248117965186074898::1763211210::0::1::::<>Node2D<><>0<>0<><>::
+square_bg.gd::GDScript::5785156046198831352::1763211179::0::1::::<>Sprite2D<><>0<>0<><>::
 Test.tscn::PackedScene::8099162704508995467::1763188382::0::1::::<><><>0<>0<><>::uid://ocqr4kaowgws::::res://icon.svg
+tileset_sf.png::CompressedTexture2D::4304482437085766179::1763212813::1763212814::1::::<><><>0<>0<>10a9465fb73c2e941dba7a6f2fb3f6b3<>res://.godot/imported/tileset_sf.png-77c03c8b154d3ca780861d3f140bb527.ctex::
 ::res://addons/::1763188382
 ::res://addons/godot_super-wakatime/::1763188382
 api_key_prompt.tscn::PackedScene::3919262858641749045::1763188382::0::1::::<><><>0<>0<><>::

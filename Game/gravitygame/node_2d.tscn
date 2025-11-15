@@ -48,11 +48,11 @@ script = ExtResource("1_0hol4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="drone"]
 texture_filter = 1
-position = Vector2(1086, 363)
+position = Vector2(1056, 409)
 sprite_frames = SubResource("SpriteFrames_kdubu")
 animation = &"walk"
 frame = 3
-frame_progress = 0.39870358
+frame_progress = 0.26954594
 
 [node name="level" type="Node2D" parent="."]
 
