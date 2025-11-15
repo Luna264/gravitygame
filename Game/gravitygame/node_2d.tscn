@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://bnq3qotn1rkul"]
+[gd_scene load_steps=10 format=3 uid="uid://bnq3qotn1rkul"]
 
+[ext_resource type="Script" uid="uid://r1uk5sjryyra" path="res://node_2d.gd" id="1_0hol4"]
 [ext_resource type="Texture2D" uid="uid://bujdnsoq255ln" path="res://temp drone/Walk.png" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://hv7bvlsfs8xd" path="res://potatoes.jpg" id="2_epypp"]
 [ext_resource type="Script" uid="uid://coomw7ewnv4y3" path="res://square_bg.gd" id="3_0hol4"]
@@ -41,6 +42,7 @@ animations = [{
 }]
 
 [node name="gravityflip" type="Node2D"]
+script = ExtResource("1_0hol4")
 
 [node name="drone" type="Node2D" parent="."]
 
@@ -54,7 +56,7 @@ frame_progress = 0.39870358
 
 [node name="level" type="Node2D" parent="."]
 
-[node name="square bg" type="Sprite2D" parent="level"]
+[node name="SquareBg" type="Sprite2D" parent="level"]
 position = Vector2(590, 311)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("2_epypp")
