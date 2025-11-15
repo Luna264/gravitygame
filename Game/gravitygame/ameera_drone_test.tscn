@@ -1,12 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://djfnwhi5s6jx4"]
+[gd_scene load_steps=2 format=3 uid="uid://djfnwhi5s6jx4"]
 
-[ext_resource type="PackedScene" uid="uid://cyokgrcsw1k4r" path="res://temp drone/drone.tscn" id="1_a7w81"]
-[ext_resource type="Script" uid="uid://dipju2ohhhl2k" path="res://temp drone/drone.gd" id="2_vxx17"]
+[ext_resource type="PackedScene" uid="uid://ccuysms5rhg1t" path="res://temp drone/drone.tscn" id="1_a7w81"]
 
 [node name="drone test" type="Node2D"]
 
 [node name="drone" parent="." instance=ExtResource("1_a7w81")]
 position = Vector2(1, -2)
-script = ExtResource("2_vxx17")
 
 [node name="Camera2D" type="Camera2D" parent="."]

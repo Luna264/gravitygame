@@ -4,19 +4,19 @@ extends CharacterBody2D
 
 func rotate_left():
 	var tween = create_tween()
-	tween.tween_property(self, "rotation_degrees", -90, 0.3)
+	tween.tween_property(self, "rotation_degrees", -90, 0)
 
 func rotate_right():
 	var tween = create_tween()
-	tween.tween_property(self, "rotation_degrees", 90, 0.3)
+	tween.tween_property(self, "rotation_degrees", 90, 0)
 
 func rotate_down():
 	var tween = create_tween()
-	tween.tween_property(self, "rotation_degrees", 180, 0.3)
+	tween.tween_property(self, "rotation_degrees", 180, 0)
 
 func rotate_up():
 	var tween = create_tween()
-	tween.tween_property(self, "rotation_degrees", 0, 0.3)
+	tween.tween_property(self, "rotation_degrees", 0, 0)
 
 
 func _physics_process(delta):
