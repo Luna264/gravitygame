@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://r1uk5sjryyra" path="res://node_2d.gd" id="1_0hol4"]
 [ext_resource type="Texture2D" uid="uid://hv7bvlsfs8xd" path="res://potatoes.jpg" id="2_epypp"]
-[ext_resource type="PackedScene" path="res://ameera_drone_test.tscn" id="5_kdubu"]
+[ext_resource type="PackedScene" uid="uid://bu3cmfkepqp4i" path="res://ameera_drone_test.tscn" id="5_kdubu"]
 [ext_resource type="Texture2D" uid="uid://b2legxs3pwddr" path="res://tileset_sf.png" id="5_q6r6c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q6r6c"]
@@ -1915,4 +1915,4 @@ tile_map_data = PackedByteArray("AAAVAAIAAQBOABgAAAAWAAIAAQBPABgAAAAXAAIAAQBQABg
 tile_set = SubResource("TileSet_kdubu")
 
 [node name="drone test" parent="." instance=ExtResource("5_kdubu")]
-position = Vector2(622, 350)
+position = Vector2(628, 205)
