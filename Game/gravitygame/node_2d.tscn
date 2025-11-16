@@ -1,8 +1,27 @@
-[gd_scene load_steps=9 format=4 uid="uid://bnq3qotn1rkul"]
+<<<<<<< Updated upstream
+[gd_scene load_steps=4 format=3 uid="uid://bnq3qotn1rkul"]
 
-[ext_resource type="Script" uid="uid://r1uk5sjryyra" path="res://node_2d.gd" id="1_0hol4"]
 [ext_resource type="Texture2D" uid="uid://hv7bvlsfs8xd" path="res://potatoes.jpg" id="2_epypp"]
 [ext_resource type="Script" uid="uid://coomw7ewnv4y3" path="res://square_bg.gd" id="3_0hol4"]
+[ext_resource type="PackedScene" uid="uid://cyokgrcsw1k4r" path="res://temp drone/drone.tscn" id="3_epypp"]
+
+[node name="gravityflip" type="Node2D"]
+
+[node name="level" type="Node2D" parent="."]
+
+[node name="square bg" type="Sprite2D" parent="level"]
+position = Vector2(539, 299.00003)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("2_epypp")
+script = ExtResource("3_0hol4")
+
+[node name="drone" parent="." instance=ExtResource("3_epypp")]
+position = Vector2(967, 275)
+=======
+[gd_scene load_steps=8 format=4 uid="uid://bnq3qotn1rkul"]
+
+[ext_resource type="Script" uid="uid://r1uk5sjryyra" path="res://node_2d.gd" id="1_0hol4"]
+[ext_resource type="Texture2D" uid="uid://de0sg46dx15kw" path="res://images/NgPXd2.png" id="2_q6r6c"]
 [ext_resource type="Texture2D" uid="uid://b2legxs3pwddr" path="res://tileset_sf.png" id="4_kdubu"]
 [ext_resource type="PackedScene" uid="uid://dim3tijlaj7tc" path="res://temp drone/drone.tscn" id="5_kdubu"]
 [ext_resource type="PackedScene" uid="uid://c2mgeg5xd3ekn" path="res://box.tscn" id="5_q6r6c"]
@@ -1885,24 +1904,24 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_d21ai")
 
 [node name="gravityflip" type="Node2D"]
+
+[node name="SquareBg" type="Sprite2D" parent="."]
+position = Vector2(657, 277)
+texture = ExtResource("2_q6r6c")
+offset = Vector2(12.175, -9.54)
 script = ExtResource("1_0hol4")
 
-[node name="level" type="Node2D" parent="."]
-
-[node name="SquareBg" type="Sprite2D" parent="level"]
-position = Vector2(590, 311)
-scale = Vector2(0.35, 0.35)
-texture = ExtResource("2_epypp")
-script = ExtResource("3_0hol4")
-
-[node name="TileMapLayer" type="TileMapLayer" parent="level/SquareBg"]
-position = Vector2(-1685.7142, -888.57135)
-scale = Vector2(2.8571427, 2.8571427)
+[node name="TileMapLayer" type="TileMapLayer" parent="SquareBg"]
+position = Vector2(-657, -276.99997)
+scale = Vector2(0.99999994, 0.99999994)
 tile_map_data = PackedByteArray("AAATAAEAAABMABgAAAAUAAEAAABNABgAAAAVAAEAAABOABgAAAAWAAEAAABPABgAAAAXAAEAAABQABgAAAAYAAEAAABRABgAAAAZAAEAAABSABgAAAAaAAEAAABTABgAAAAbAAEAAABUABgAAAAcAAEAAABVABgAAAAdAAEAAABWABgAAAAeAAEAAABNABgAAAAfAAEAAABOABgAAAAgAAEAAABPABgAAAAhAAEAAABQABgAAAAiAAEAAABRABgAAAAjAAEAAABSABgAAAAkAAEAAABTABgAAAAlAAEAAABUABgAAAAmAAEAAABVABgAAAAnAAEAAABWABgAAAAoAAEAAABNABgAAAApAAEAAABNABgAAAAqAAEAAABOABgAAAArAAEAAABNABgAAAAsAAEAAABOABgAAAAtAAEAAABPABgAAAAuAAEAAABQABgAAAAvAAEAAABRABgAAAAwAAEAAABSABgAAAAxAAEAAABTABgAAAAyAAEAAABUABgAAAAzAAEAAABVABgAAAA0AAEAAABWABgAAAA1AAEAAABWABgAAAA2AAEAAABXABgAAAA2AAIAAABXABkAAAA2AAMAAABXABoAAAA2AAQAAABXABsAAAA2AAUAAABXABwAAAA2AAYAAABXAB0AAAA2AAcAAABXAB4AAAA2AAgAAABXAB8AAAA2AAkAAABXACAAAAA2AAoAAABXACEAAAA2AAsAAABXABkAAAA2AAwAAABXABoAAAA2AA0AAABXABsAAAA2AA4AAABXABwAAAA2AA8AAABXAB0AAAA2ABAAAABXAB4AAAA2ABEAAABXAB8AAAA2ABIAAABXACAAAAA2ABMAAABXACEAAAA2ABQAAABXABkAAAA2ABUAAABXABoAAAA2ABYAAABXABsAAAA2ABcAAABXABwAAAA2ABgAAABXAB0AAAA2ABkAAABXABkAAAA2ABoAAABXABkAAAA2ABsAAABXABoAAAA2ABwAAABXABsAAAA2AB0AAABXABwAAAA2AB4AAABXAB0AAAA2AB8AAABXAB4AAAA2ACAAAABXAB8AAAA2ACEAAABXACAAAAA2ACIAAABXACEAAAA2ACMAAABXACIAAAA2ACQAAABWACMAAAAtACQAAABPACMAAAAuACQAAABQACMAAAAvACQAAABRACMAAAAwACQAAABSACMAAAAxACQAAABTACMAAAAyACQAAABUACMAAAAzACQAAABVACMAAAA0ACQAAABWACMAAAA1ACQAAABVACMAAAArACQAAABNACMAAAAsACQAAABOACMAAAAhACQAAABRACMAAAAiACQAAABSACMAAAAjACQAAABTACMAAAAkACQAAABUACMAAAAlACQAAABVACMAAAAmACQAAABWACMAAAAnACQAAABTACMAAAAoACQAAABUACMAAAApACQAAABVACMAAAAqACQAAABWACMAAAAdACQAAABWACMAAAAeACQAAABVACMAAAAfACQAAABWACMAAAAgACQAAABQACMAAAAWACQAAABPACMAAAAXACQAAABQACMAAAAYACQAAABRACMAAAAZACQAAABSACMAAAAaACQAAABTACMAAAAbACQAAABUACMAAAAcACQAAABVACMAAAAUACQAAABNACMAAAAVACQAAABOACMAAAATACQAAABMACMAAAATABoAAABMACIAAAATABsAAABMABoAAAATABwAAABMABsAAAATAB0AAABMABwAAAATAB4AAABMAB0AAAATAB8AAABMAB4AAAATACAAAABMAB8AAAATACEAAABMACAAAAATACIAAABMACEAAAATACMAAABMACIAAAATAA8AAABMACIAAAATABAAAABMABoAAAATABEAAABMABkAAAATABIAAABMABoAAAATABMAAABMABsAAAATABQAAABMABwAAAATABUAAABMAB0AAAATABYAAABMAB4AAAATABcAAABMAB8AAAATABgAAABMACAAAAATABkAAABMACEAAAATAAYAAABMAB0AAAATAAcAAABMAB4AAAATAAgAAABMAB8AAAATAAkAAABMACAAAAATAAoAAABMACEAAAATAAsAAABMACIAAAATAAwAAABMACIAAAATAA0AAABMACAAAAATAA4AAABMACEAAAATAAMAAABMABoAAAATAAQAAABMABsAAAATAAUAAABMABwAAAATAAIAAABMABkAAAA=")
 tile_set = SubResource("TileSet_rj586")
+
+[node name="level" type="Node2D" parent="."]
 
 [node name="box" parent="." instance=ExtResource("5_q6r6c")]
 position = Vector2(486, 177)
 
 [node name="drone" parent="." instance=ExtResource("5_kdubu")]
 position = Vector2(645, 370)
+>>>>>>> Stashed changes
