@@ -1,25 +1,5 @@
 extends Node2D
 
-extends Sprite2D
-var current_direction := "down"
-var gravity_vector:= Vector2.DOWN
-
-func rotate_to(direction: String):
-	if direction == current_direction:
-		return
-match direction:
-	"up":
-		rotation_degrees: 90
-		gravity_vector: Vector2.UP
-	"down":
-		rotation_degrees:0
-		gravity_vector: Vector2.DOWN
-	"left":
-		rotation_degrees: -90
-		gravity_vector: Vector2.LEFT
-	"right":
-		rotation_degrees: 180
-		gravity_vector: Vector2.RIGHT
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
