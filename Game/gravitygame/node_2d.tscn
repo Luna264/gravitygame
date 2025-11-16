@@ -1,5 +1,5 @@
-<<<<<<< Updated upstream
-[gd_scene load_steps=4 format=3 uid="uid://bnq3qotn1rkul"]
+[gd_scene load_steps=9 format=4 uid="uid://bnq3qotn1rkul"]
+
 
 [ext_resource type="Texture2D" uid="uid://hv7bvlsfs8xd" path="res://potatoes.jpg" id="2_epypp"]
 [ext_resource type="Script" uid="uid://coomw7ewnv4y3" path="res://square_bg.gd" id="3_0hol4"]
