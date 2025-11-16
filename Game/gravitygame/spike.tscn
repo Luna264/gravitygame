@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c2kcfxk0w002w"]
+[gd_scene load_steps=5 format=3 uid="uid://1k15aprok4ac"]
 
 [ext_resource type="Script" path="res://spike.gd" id="1_7k7bx"]
-[ext_resource type="Texture2D" uid="uid://b33lekjus427e" path="res://images/512x512 Crystals Transparent.png" id="1_8ryga"]
+[ext_resource type="Texture2D" uid="uid://crbgbid01u7hy" path="res://images/512x512 Crystals Transparent.png" id="1_8ryga"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7k7bx"]
 size = Vector2(464.04712, 445.5775)

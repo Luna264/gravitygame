@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c02md1kfhhh27"]
+
+[ext_resource type="Texture2D" uid="uid://djx3csqw1hp3v" path="res://stone-pillar.jpg" id="1_rjv88"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ir8iy"]
+size = Vector2(254, 256)
+
+[node name="pillar" type="CharacterBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rjv88")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ir8iy")
