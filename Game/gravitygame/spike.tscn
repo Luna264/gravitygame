@@ -3,33 +3,27 @@
 [ext_resource type="Script" uid="uid://d13hi4u1g2ivr" path="res://spike.gd" id="1_7k7bx"]
 [ext_resource type="Texture2D" uid="uid://b33lekjus427e" path="res://images/512x512 Crystals Transparent.png" id="1_8ryga"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_tggh8"]
-radius = 241.01056
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_7k7bx"]
-radius = 70.73277
+radius = 244.01845
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tggh8"]
+radius = 245.0
 
 [node name="spike" type="CharacterBody2D" groups=["hazards"]]
+scale = Vector2(0.4331457, 0.4331457)
 script = ExtResource("1_7k7bx")
 
-[node name="Sprite2D" type="Sprite2D" parent="." groups=["hazards"]]
-position = Vector2(11, 0.99998474)
-scale = Vector2(0.30291972, 0.3029197)
+[node name="512x512CrystalsTransparent" type="Sprite2D" parent="." groups=["hazards"]]
+position = Vector2(-2, -3)
 texture = ExtResource("1_8ryga")
 hframes = 14
-vframes = 7
-
-[node name="Area2D" type="Area2D" parent="." groups=["hazards"]]
-position = Vector2(11, 0.99998474)
-scale = Vector2(0.30291972, 0.3029197)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["hazards"]]
-position = Vector2(-6.6024094, -42.91562)
-shape = SubResource("CircleShape2D_tggh8")
-debug_color = Color(0.91276497, 0.22430229, 0.4861285, 0.41960785)
+vframes = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["hazards"]]
-position = Vector2(7, -13)
 shape = SubResource("CircleShape2D_7k7bx")
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[node name="Area2D" type="Area2D" parent="." groups=["hazards"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["hazards"]]
+position = Vector2(-6, 5)
+shape = SubResource("CircleShape2D_tggh8")

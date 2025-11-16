@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b33lekjus427e"
-path="res://.godot/imported/512x512 Crystals Transparent.png-bb037eaafe32b3a73d736a9dc6cd7074.ctex"
+uid="uid://b0xv74eh5cg2c"
+path="res://.godot/imported/bg.jpg-be0bbb7afea23fe3e63b8f540e0adfdd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/512x512 Crystals Transparent.png"
-dest_files=["res://.godot/imported/512x512 Crystals Transparent.png-bb037eaafe32b3a73d736a9dc6cd7074.ctex"]
+source_file="res://bg.jpg"
+dest_files=["res://.godot/imported/bg.jpg-be0bbb7afea23fe3e63b8f540e0adfdd.ctex"]
 
 [params]
 
