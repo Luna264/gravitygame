@@ -1,21 +1,24 @@
 extends Node2D
 
-#a
-# Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
 	pass # Replace with function body.
 
 func rotate_left():
-	$level/SquareBg.rotation_degrees = -90
+	var tween = create_tween()
+	tween.tween_property(self, "rotation_degrees", -90, 0)
 	
 func rotate_right():
-	$level/SquareBg.rotation_degrees = 90
+	var tween = create_tween()
+	tween.tween_property(self, "rotation_degrees", 90, 0)
 	
 func rotate_down():
-	$level/SquareBg.rotation_degrees = 180
+	var tween = create_tween()
+	tween.tween_property(self, "rotation_degrees", 180, 0)
 	
 func rotate_up():
-	$level/SquareBg.rotation_degrees = 0
+	var tween = create_tween()
+	tween.tween_property(self, "rotation_degrees", 0, 0)
 
 func _unhandled_input(event):
 	if Input.is_action_just_pressed("rotate_left"):
@@ -27,10 +30,8 @@ func _unhandled_input(event):
 	if Input.is_action_just_pressed("rotate_up"):
 		rotate_up()
 
+
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
-
-func _on_area_2d_2_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
