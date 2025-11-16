@@ -16,4 +16,4 @@ we used godot. with the help of tongyu, youtube tutorials, parthenon's workshops
 - settings (soon)
 
 ## thanks and credits
-made by tats and ameera for hack club's parthenon! thanks to everyone involved. any feedback or suggestions are greatly appreciated.
+made by tats and ameera for hack club's parthenon! thanks to everyone involved. any feedback or suggestions are greatly appreciated. we know it's trashy, we're sleep deprived.
