@@ -1,24 +1,29 @@
-# Godot 4+ specific ignores
-.godot/
-.nomedia
 
-# Godot-specific ignores
+.godot/
 .import/
-export.cfg
-export_credentials.cfg
+
+
+editor_settings-*.cfg
+
+
+.DS_Store
+Thumbs.db
+
+
+.vscode/
+.idea/
+
+
+*.log
 *.tmp
 
-# Imported translations (automatically generated from CSV files)
-*.translation
+__pycache__/
+*.pyc
 
-# Mono-specific ignores
-.mono/
-data_*/
-mono_crash.*.json
-Game/gravitygame/.godot/editor/node_2d.tscn-editstate-362256a061aa8890e9a1e558b11e5ec3.cfg
-Game/gravitygame/.godot/editor/script_editor_cache.cfg
-Game/gravitygame/.godot/editor/project_metadata.cfg
-Game/gravitygame/.godot/editor/node_2d.tscn-folding-362256a061aa8890e9a1e558b11e5ec3.cfg
-Game/gravitygame/.godot/editor/node_2d.tscn-editstate-362256a061aa8890e9a1e558b11e5ec3.cfg
-Game/gravitygame/.godot/editor/filesystem_cache10
-Game/gravitygame/.godot/editor/project_metadata.cfg
+
+export/
+builds/
+dist/
+
+
+*.bak
