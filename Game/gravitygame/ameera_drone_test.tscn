@@ -1,6 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://djfnwhi5s6jx4"]
+[gd_scene load_steps=2 format=3 uid="uid://bs88yaj7spprs"]
 
-[ext_resource type="PackedScene" uid="uid://ccuysms5rhg1t" path="res://temp drone/drone.tscn" id="1_a7w81"]
+[ext_resource type="PackedScene" uid="uid://dim3tijlaj7tc" path="res://temp drone/drone.tscn" id="1_a7w81"]
 
 [node name="drone test" type="Node2D"]
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dim3tijlaj7tc"]
 
-[ext_resource type="Script" path="res://temp drone/drone.gd" id="1_066gn"]
+[ext_resource type="Script" uid="uid://dipju2ohhhl2k" path="res://temp drone/drone.gd" id="1_066gn"]
 [ext_resource type="Texture2D" uid="uid://bujdnsoq255ln" path="res://temp drone/Walk.png" id="1_sqhos"]
 
 [sub_resource type="Animation" id="Animation_puw62"]

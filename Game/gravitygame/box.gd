@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+#a
 func rotate_left():
 	var tween = create_tween()
 	tween.tween_property(self, "rotation_degrees", -90, 0)
