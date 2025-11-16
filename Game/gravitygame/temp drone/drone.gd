@@ -30,5 +30,11 @@ func _physics_process(delta):
 		rotate_up()
 	if Input.is_action_just_pressed("gravDown"):
 		rotate_down()
+		
 	
 	move_and_slide()
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	if area.is_in_group("hazards"):
+		queue_free()
