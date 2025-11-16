@@ -1909,15 +1909,23 @@ position = Vector2(711.4286, 682.8571)
 scale = Vector2(0.33999997, 0.33999997)
 
 [node name="endZone" parent="level" instance=ExtResource("5_d21ai")]
-position = Vector2(331, 89)
+position = Vector2(506, 573.00006)
 scale = Vector2(2.5, 2.5)
 
 [node name="box" parent="." instance=ExtResource("5_q6r6c")]
-position = Vector2(329, 84)
+position = Vector2(329, 173)
 
 [node name="drone" parent="." instance=ExtResource("5_kdubu")]
-position = Vector2(405, 551)
+position = Vector2(384, 174)
 
 [node name="pillar" parent="." instance=ExtResource("9_4d7sh")]
 position = Vector2(578, 158.00002)
+scale = Vector2(0.234, 0.234)
+
+[node name="pillar2" parent="." instance=ExtResource("9_4d7sh")]
+position = Vector2(638, 158)
+scale = Vector2(0.234, 0.234)
+
+[node name="pillar3" parent="." instance=ExtResource("9_4d7sh")]
+position = Vector2(447.99997, 573)
 scale = Vector2(0.234, 0.234)
