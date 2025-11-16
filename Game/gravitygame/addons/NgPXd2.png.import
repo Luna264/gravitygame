@@ -2,26 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-<<<<<<<< Updated upstream:Game/gravitygame/images/512x512 Crystals Transparent.png.import
-uid="uid://b33lekjus427e"
-path="res://.godot/imported/512x512 Crystals Transparent.png-bb037eaafe32b3a73d736a9dc6cd7074.ctex"
-========
-uid="uid://2xeudhxhpd2e"
+uid="uid://b7wp2ng34wq8f"
 path="res://.godot/imported/NgPXd2.png-f04bc223d8b0a475ef0dc3655a4a03be.ctex"
->>>>>>>> Stashed changes:Game/gravitygame/addons/NgPXd2.png.import
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-<<<<<<<< Updated upstream:Game/gravitygame/images/512x512 Crystals Transparent.png.import
-source_file="res://images/512x512 Crystals Transparent.png"
-dest_files=["res://.godot/imported/512x512 Crystals Transparent.png-bb037eaafe32b3a73d736a9dc6cd7074.ctex"]
-========
 source_file="res://addons/NgPXd2.png"
 dest_files=["res://.godot/imported/NgPXd2.png-f04bc223d8b0a475ef0dc3655a4a03be.ctex"]
->>>>>>>> Stashed changes:Game/gravitygame/addons/NgPXd2.png.import
 
 [params]
 

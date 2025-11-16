@@ -1,13 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://cxl2ud0jtrpgs"]
+[gd_scene load_steps=5 format=3 uid="uid://c2kcfxk0w002w"]
 
-[ext_resource type="Script" uid="uid://d13hi4u1g2ivr" path="res://spike.gd" id="1_7k7bx"]
+[ext_resource type="Script" path="res://spike.gd" id="1_7k7bx"]
 [ext_resource type="Texture2D" uid="uid://b33lekjus427e" path="res://images/512x512 Crystals Transparent.png" id="1_8ryga"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_7k7bx"]
-radius = 244.01845
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7k7bx"]
+size = Vector2(464.04712, 445.5775)
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_tggh8"]
-radius = 245.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tggh8"]
+size = Vector2(464.04706, 445.57755)
 
 [node name="spike" type="CharacterBody2D" groups=["hazards"]]
 scale = Vector2(0.4331457, 0.4331457)
@@ -20,10 +20,11 @@ hframes = 14
 vframes = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["hazards"]]
-shape = SubResource("CircleShape2D_7k7bx")
+position = Vector2(-21.932573, -1.1543504)
+shape = SubResource("RectangleShape2D_7k7bx")
 
 [node name="Area2D" type="Area2D" parent="." groups=["hazards"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["hazards"]]
-position = Vector2(-6, 5)
-shape = SubResource("CircleShape2D_tggh8")
+position = Vector2(-21.932566, -1.154335)
+shape = SubResource("RectangleShape2D_tggh8")
