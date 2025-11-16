@@ -8,19 +8,19 @@ func _ready() -> void:
 
 func rotate_left():
 	var tween = create_tween()
-	tween.tween_property(self, "rotation_degrees", -90, 0.4)
+	tween.tween_property(self, "rotation_degrees", -90, 0.035)
 	
 func rotate_right():
 	var tween = create_tween()
-	tween.tween_property(self, "rotation_degrees", 90, 0.4)
+	tween.tween_property(self, "rotation_degrees", 90, 0.035)
 	
 func rotate_down():
 	var tween = create_tween()
-	tween.tween_property(self, "rotation_degrees", 180, 0.4)
+	tween.tween_property(self, "rotation_degrees", 180, 0.035)
 	
 func rotate_up():
 	var tween = create_tween()
-	tween.tween_property(self, "rotation_degrees", 0, 0.4)
+	tween.tween_property(self, "rotation_degrees", 0, 0.035)
 
 func _unhandled_input(event):
 	if Input.is_action_just_pressed("rotate_left"):

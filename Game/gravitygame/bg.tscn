@@ -1,0 +1,83 @@
+[gd_scene load_steps=9 format=3 uid="uid://btl83xa0oe1g3"]
+
+[ext_resource type="Texture2D" uid="uid://da13gqlg35c2u" path="res://images/space.png" id="1_36ycx"]
+[ext_resource type="Texture2D" uid="uid://b7y8cdmap62qj" path="res://images/Lava.png" id="2_plmvg"]
+[ext_resource type="Texture2D" uid="uid://dukumw82voi8u" path="res://images/Ice.png" id="3_7sudn"]
+[ext_resource type="Texture2D" uid="uid://dyw8s0idvgqfj" path="res://images/Black_hole.png" id="4_b16yh"]
+[ext_resource type="Texture2D" uid="uid://fmspqw8e6mk4" path="res://images/spritesheet.png" id="5_twoho"]
+
+[sub_resource type="Animation" id="Animation_pi0n5"]
+resource_name = "new_animation"
+length = 2.0001
+loop_mode = 2
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Spritesheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.065643996, 0.12321032, 0.19289315, 0.19391581, 0.24442717, 0.26666668, 0.2837928, 0.30403885, 0.37873128, 0.3817993, 0.43333337, 0.44846603, 0.4716763, 0.51109385, 0.55654365, 0.6151327, 0.65045947, 0.66462135, 0.6979547, 0.73333335, 0.7514821, 0.7646214, 0.8000001, 0.83532685, 0.86968285, 0.9232104, 0.9767378, 1.0525049, 1.0544984, 1.0676377, 1.1110939, 1.1141101, 1.1201942, 1.189877, 1.2232105, 1.2605824, 1.3262265, 1.3474435, 1.3605826, 1.4191717, 1.4221877, 1.4333334, 1.4848155, 1.5434045, 1.5686604, 1.6201943, 1.6333334, 1.638343, 1.7151328, 1.7161036, 1.7605826, 1.8151327, 1.8262266, 1.8888544, 1.9019935, 1.9949384, 2.0575147, 2.076686, 2.08277, 2.1252038, 2.2029645, 2.2564921),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 7, 9, 6, 10, 8, 11, 14, 13, 12, 15, 16, 18, 17, 19, 20, 23, 21, 22, 25, 24, 26, 27, 28, 31, 29, 30, 33, 32, 34, 35, 36, 37, 38, 39, 40, 42, 41, 44, 43, 45, 46, 49, 50, 47, 51, 48, 52, 54, 53, 55, 56, 59, 58, 57, 59, 59, 59, 59]
+}
+
+[sub_resource type="Animation" id="Animation_kjpld"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationPlayer/Spritesheet:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ft7a8"]
+_data = {
+&"RESET": SubResource("Animation_kjpld"),
+&"new_animation": SubResource("Animation_pi0n5")
+}
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Space" type="Sprite2D" parent="."]
+position = Vector2(562.00006, 279.00003)
+scale = Vector2(1.475475, 1.475475)
+texture = ExtResource("1_36ycx")
+
+[node name="Lava" type="Sprite2D" parent="."]
+position = Vector2(216.5, 152.5)
+scale = Vector2(1.4791666, 1.4791666)
+texture = ExtResource("2_plmvg")
+
+[node name="Ice" type="Sprite2D" parent="."]
+position = Vector2(1004, 357)
+rotation = 0.11287139
+texture = ExtResource("3_7sudn")
+
+[node name="BlackHole" type="Sprite2D" parent="."]
+position = Vector2(798, 71.00003)
+rotation = 0.9707515
+scale = Vector2(3.301628, 3.301628)
+texture = ExtResource("4_b16yh")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ft7a8")
+}
+autoplay = "new_animation"
+
+[node name="Spritesheet" type="Sprite2D" parent="AnimationPlayer"]
+position = Vector2(218, 507)
+rotation = -0.44565493
+scale = Vector2(2.0635564, 2.0635564)
+texture = ExtResource("5_twoho")
+hframes = 60
+frame = 1

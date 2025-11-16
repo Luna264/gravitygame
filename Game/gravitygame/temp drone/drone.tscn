@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dim3tijlaj7tc"]
+[gd_scene load_steps=9 format=3 uid="uid://dim3tijlaj7tc"]
 
 [ext_resource type="Script" uid="uid://dipju2ohhhl2k" path="res://temp drone/drone.gd" id="1_066gn"]
-[ext_resource type="Texture2D" uid="uid://bujdnsoq255ln" path="res://temp drone/Walk.png" id="1_sqhos"]
+[ext_resource type="Texture2D" uid="uid://cwksgreryfq5n" path="res://images/drone.png" id="2_066gn"]
 
 [sub_resource type="Animation" id="Animation_puw62"]
 length = 0.001
@@ -20,7 +20,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_d5du7"]
 resource_name = "walk"
-length = 0.4
+length = 0.5
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -29,42 +29,54 @@ tracks/0/path = NodePath("Walk:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.13333334, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.16666667, 0.33333334),
+"transitions": PackedFloat32Array(1, 1, 4.141057),
 "update": 1,
-"values": [0, 1, 3]
+"values": [1, 2, 3]
 }
+
+[sub_resource type="Animation" id="Animation_066gn"]
+resource_name = "idle"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_30i2v"]
 _data = {
 &"RESET": SubResource("Animation_puw62"),
+&"idle": SubResource("Animation_066gn"),
 &"walk": SubResource("Animation_d5du7")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_066gn"]
-size = Vector2(60, 58)
+size = Vector2(47.25, 19)
 
-[node name="drone" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r11t2"]
+size = Vector2(39.70835, 11.939325)
+
+[node name="drone" type="CharacterBody2D" groups=["player"]]
 texture_filter = 1
 script = ExtResource("1_066gn")
 
-[node name="Walk" type="Sprite2D" parent="."]
-position = Vector2(1, 7)
-texture = ExtResource("1_sqhos")
-hframes = 4
+[node name="Walk" type="Sprite2D" parent="." groups=["player"]]
+position = Vector2(1, -1)
+scale = Vector2(2.5691123, 2.5691123)
+texture = ExtResource("2_066gn")
+hframes = 9
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." groups=["player"]]
 libraries = {
 &"": SubResource("AnimationLibrary_30i2v")
 }
+autoplay = "walk"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, -7)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["player"]]
+position = Vector2(0.625, 1.5)
+scale = Vector2(1.3823516, 1.3823516)
 shape = SubResource("RectangleShape2D_066gn")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["player"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource("RectangleShape2D_066gn")
+position = Vector2(-0.14455366, 1.6073694)
+scale = Vector2(1.6477268, 2.1318436)
+shape = SubResource("RectangleShape2D_r11t2")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

@@ -1,17 +1,17 @@
 [gd_scene load_steps=12 format=4 uid="uid://jtf18asisf7e"]
 
-[ext_resource type="Script" uid="uid://r1uk5sjryyra" path="res://node_2d.gd" id="1_32sev"]
-[ext_resource type="Texture2D" uid="uid://b0xv74eh5cg2c" path="res://bg.jpg" id="2_rse2e"]
-[ext_resource type="Script" uid="uid://coomw7ewnv4y3" path="res://square_bg.gd" id="3_jm7fg"]
-[ext_resource type="Texture2D" uid="uid://b2legxs3pwddr" path="res://tileset_sf.png" id="4_3pflp"]
-[ext_resource type="PackedScene" uid="uid://1k15aprok4ac" path="res://spike.tscn" id="5_gxtgb"]
-[ext_resource type="PackedScene" path="res://end_zone.tscn" id="6_44p27"]
-[ext_resource type="PackedScene" uid="uid://c2mgeg5xd3ekn" path="res://box.tscn" id="7_enfa2"]
-[ext_resource type="PackedScene" uid="uid://dim3tijlaj7tc" path="res://temp drone/drone.tscn" id="8_xefxx"]
-[ext_resource type="PackedScene" uid="uid://c02md1kfhhh27" path="res://pillar.tscn" id="9_m52xl"]
+[ext_resource type="Texture2D" uid="uid://b0xv74eh5cg2c" path="res://bg.jpg" id="1_dfjjl"]
+[ext_resource type="Script" uid="uid://coomw7ewnv4y3" path="res://square_bg.gd" id="2_at1ld"]
+[ext_resource type="Texture2D" uid="uid://b2legxs3pwddr" path="res://tileset_sf.png" id="3_sd18g"]
+[ext_resource type="PackedScene" uid="uid://1k15aprok4ac" path="res://spike.tscn" id="4_vm7no"]
+[ext_resource type="PackedScene" uid="uid://c02md1kfhhh27" path="res://pillar.tscn" id="5_hbb88"]
+[ext_resource type="PackedScene" uid="uid://c2mgeg5xd3ekn" path="res://box.tscn" id="6_wcjpl"]
+[ext_resource type="PackedScene" uid="uid://dim3tijlaj7tc" path="res://temp drone/drone.tscn" id="7_5orea"]
+[ext_resource type="PackedScene" uid="uid://b0ffiwm8d7y3i" path="res://end_zone.tscn" id="8_0ourt"]
+[ext_resource type="PackedScene" uid="uid://btl83xa0oe1g3" path="res://bg.tscn" id="9_at1ld"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d21ai"]
-texture = ExtResource("4_3pflp")
+texture = ExtResource("3_sd18g")
 1:0/0 = 0
 2:0/0 = 0
 5:0/0 = 0
@@ -1887,16 +1887,19 @@ texture = ExtResource("4_3pflp")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_d21ai")
 
-[node name="second-level" type="Node2D"]
-script = ExtResource("1_32sev")
+[node name="level_2" type="Node2D"]
+
+[node name="Node2D" parent="." instance=ExtResource("9_at1ld")]
+position = Vector2(-57, -99)
+scale = Vector2(1.1642632, 1.1642632)
 
 [node name="level" type="Node2D" parent="."]
 
 [node name="SquareBg" type="Sprite2D" parent="level"]
 position = Vector2(573.00006, 338)
 scale = Vector2(0.35, 0.35)
-texture = ExtResource("2_rse2e")
-script = ExtResource("3_jm7fg")
+texture = ExtResource("1_dfjjl")
+script = ExtResource("2_at1ld")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="level/SquareBg"]
 position = Vector2(-1685.7142, -888.57135)
@@ -1904,45 +1907,46 @@ scale = Vector2(2.8571427, 2.8571427)
 tile_map_data = PackedByteArray("AAATAAEAAABMABgAAAAUAAEAAABNABgAAAAVAAEAAABOABgAAAAWAAEAAABPABgAAAAXAAEAAABQABgAAAAYAAEAAABRABgAAAAZAAEAAABSABgAAAAaAAEAAABTABgAAAAbAAEAAABUABgAAAAcAAEAAABVABgAAAAdAAEAAABWABgAAAAeAAEAAABNABgAAAAfAAEAAABOABgAAAAgAAEAAABPABgAAAAhAAEAAABQABgAAAAiAAEAAABRABgAAAAjAAEAAABSABgAAAAkAAEAAABTABgAAAAlAAEAAABUABgAAAAmAAEAAABVABgAAAAnAAEAAABWABgAAAAoAAEAAABNABgAAAApAAEAAABNABgAAAAqAAEAAABOABgAAAArAAEAAABNABgAAAAsAAEAAABOABgAAAAtAAEAAABPABgAAAAuAAEAAABQABgAAAAvAAEAAABRABgAAAAwAAEAAABSABgAAAAxAAEAAABTABgAAAAyAAEAAABUABgAAAAzAAEAAABVABgAAAA0AAEAAABWABgAAAA1AAEAAABWABgAAAA2AAEAAABXABgAAAA2AAIAAABXABkAAAA2AAMAAABXABoAAAA2AAQAAABXABsAAAA2AAUAAABXABwAAAA2AAYAAABXAB0AAAA2AAcAAABXAB4AAAA2AAgAAABXAB8AAAA2AAkAAABXACAAAAA2AAoAAABXACEAAAA2AAsAAABXABkAAAA2AAwAAABXABoAAAA2AA0AAABXABsAAAA2AA4AAABXABwAAAA2AA8AAABXAB0AAAA2ABAAAABXAB4AAAA2ABEAAABXAB8AAAA2ABIAAABXACAAAAA2ABMAAABXACEAAAA2ABQAAABXABkAAAA2ABUAAABXABoAAAA2ABYAAABXABsAAAA2ABcAAABXABwAAAA2ABgAAABXAB0AAAA2ABkAAABXABkAAAA2ABoAAABXABkAAAA2ABsAAABXABoAAAA2ABwAAABXABsAAAA2AB0AAABXABwAAAA2AB4AAABXAB0AAAA2AB8AAABXAB4AAAA2ACAAAABXAB8AAAA2ACEAAABXACAAAAA2ACIAAABXACEAAAA2ACMAAABXACIAAAA2ACQAAABWACMAAAAtACQAAABPACMAAAAuACQAAABQACMAAAAvACQAAABRACMAAAAwACQAAABSACMAAAAxACQAAABTACMAAAAyACQAAABUACMAAAAzACQAAABVACMAAAA0ACQAAABWACMAAAA1ACQAAABVACMAAAArACQAAABNACMAAAAsACQAAABOACMAAAAhACQAAABRACMAAAAiACQAAABSACMAAAAjACQAAABTACMAAAAkACQAAABUACMAAAAlACQAAABVACMAAAAmACQAAABWACMAAAAnACQAAABTACMAAAAoACQAAABUACMAAAApACQAAABVACMAAAAqACQAAABWACMAAAAdACQAAABWACMAAAAeACQAAABVACMAAAAfACQAAABWACMAAAAgACQAAABQACMAAAAWACQAAABPACMAAAAXACQAAABQACMAAAAYACQAAABRACMAAAAZACQAAABSACMAAAAaACQAAABTACMAAAAbACQAAABUACMAAAAcACQAAABVACMAAAAUACQAAABNACMAAAAVACQAAABOACMAAAATACQAAABMACMAAAATABoAAABMACIAAAATABsAAABMABoAAAATABwAAABMABsAAAATAB0AAABMABwAAAATAB4AAABMAB0AAAATAB8AAABMAB4AAAATACAAAABMAB8AAAATACEAAABMACAAAAATACIAAABMACEAAAATACMAAABMACIAAAATAA8AAABMACIAAAATABAAAABMABoAAAATABEAAABMABkAAAATABIAAABMABoAAAATABMAAABMABsAAAATABQAAABMABwAAAATABUAAABMAB0AAAATABYAAABMAB4AAAATABcAAABMAB8AAAATABgAAABMACAAAAATABkAAABMACEAAAATAAYAAABMAB0AAAATAAcAAABMAB4AAAATAAgAAABMAB8AAAATAAkAAABMACAAAAATAAoAAABMACEAAAATAAsAAABMACIAAAATAAwAAABMACIAAAATAA0AAABMACAAAAATAA4AAABMACEAAAATAAMAAABMABoAAAATAAQAAABMABsAAAATAAUAAABMABwAAAATAAIAAABMABkAAAA=")
 tile_set = SubResource("TileSet_rj586")
 
-[node name="spike" parent="level/SquareBg" instance=ExtResource("5_gxtgb")]
-position = Vector2(-137.14294, 37.142834)
-scale = Vector2(0.33999997, -0.34571433)
+[node name="spike" parent="level/SquareBg" instance=ExtResource("4_vm7no")]
+position = Vector2(-102.857346, 45.71425)
+scale = Vector2(2.1101806, -2.145646)
 
-[node name="spike2" parent="level/SquareBg" instance=ExtResource("5_gxtgb")]
-position = Vector2(322.85706, 659.99994)
-scale = Vector2(0.33999997, -0.34571433)
+[node name="spike3" parent="level/SquareBg" instance=ExtResource("4_vm7no")]
+position = Vector2(362.85693, 634.28564)
+rotation = -2.4991138
+scale = Vector2(1.6031916, 1.6382312)
+skew = -0.015913367
 
-[node name="pillar" parent="level/SquareBg" instance=ExtResource("9_m52xl")]
-position = Vector2(-314.2859, -125.714294)
+[node name="pillar" parent="level/SquareBg" instance=ExtResource("5_hbb88")]
+position = Vector2(-314.2859, -145.7143)
 scale = Vector2(0.66857135, 0.66857135)
 
-[node name="pillar2" parent="level/SquareBg" instance=ExtResource("9_m52xl")]
-position = Vector2(-142.85718, -125.714294)
+[node name="pillar2" parent="level/SquareBg" instance=ExtResource("5_hbb88")]
+position = Vector2(-142.85718, -145.7143)
 scale = Vector2(0.66857135, 0.66857135)
 
-[node name="pillar3" parent="level/SquareBg" instance=ExtResource("9_m52xl")]
-position = Vector2(20, -125.714294)
+[node name="pillar3" parent="level/SquareBg" instance=ExtResource("5_hbb88")]
+position = Vector2(20, -145.7143)
 scale = Vector2(0.66857135, 0.66857135)
 
-[node name="pillar4" parent="level/SquareBg" instance=ExtResource("9_m52xl")]
-position = Vector2(491.42834, 497.14282)
+[node name="pillar4" parent="level/SquareBg" instance=ExtResource("5_hbb88")]
+position = Vector2(159.99976, 445.71423)
 scale = Vector2(0.66857135, 0.66857135)
 
-[node name="pillar5" parent="level/SquareBg" instance=ExtResource("9_m52xl")]
-position = Vector2(319.99976, 497.14282)
+[node name="pillar5" parent="level/SquareBg" instance=ExtResource("5_hbb88")]
+position = Vector2(-11.428833, 445.71423)
 scale = Vector2(0.66857135, 0.66857135)
 
-[node name="pillar6" parent="level/SquareBg" instance=ExtResource("9_m52xl")]
-position = Vector2(662.8568, 497.14282)
+[node name="pillar6" parent="level/SquareBg" instance=ExtResource("5_hbb88")]
+position = Vector2(331.42822, 445.71423)
 scale = Vector2(0.66857135, 0.66857135)
 
-[node name="endZone" parent="level" instance=ExtResource("6_44p27")]
-position = Vector2(567, 512)
-scale = Vector2(2.5, 2.5)
-
-[node name="box" parent="." instance=ExtResource("7_enfa2")]
+[node name="box" parent="." instance=ExtResource("6_wcjpl")]
 position = Vector2(333, 156)
 scale = Vector2(1.154, 1.154)
 
-[node name="drone" parent="." instance=ExtResource("8_xefxx")]
-position = Vector2(393, 163)
+[node name="drone" parent="." instance=ExtResource("7_5orea")]
+position = Vector2(433, 152)
+
+[node name="endZone" parent="." instance=ExtResource("8_0ourt")]
+position = Vector2(785, 118)

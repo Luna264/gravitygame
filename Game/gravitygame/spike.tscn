@@ -1,30 +1,30 @@
 [gd_scene load_steps=5 format=3 uid="uid://1k15aprok4ac"]
 
-[ext_resource type="Script" path="res://spike.gd" id="1_7k7bx"]
-[ext_resource type="Texture2D" uid="uid://crbgbid01u7hy" path="res://images/512x512 Crystals Transparent.png" id="1_8ryga"]
+[ext_resource type="Script" uid="uid://d13hi4u1g2ivr" path="res://spike.gd" id="1_7k7bx"]
+[ext_resource type="Texture2D" uid="uid://dq5qnt5wcv3ig" path="res://images/spikes.png" id="2_7k7bx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7k7bx"]
-size = Vector2(464.04712, 445.5775)
+size = Vector2(83.112915, 83.112915)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tggh8"]
-size = Vector2(464.04706, 445.57755)
+size = Vector2(83.11291, 85.4216)
 
 [node name="spike" type="CharacterBody2D" groups=["hazards"]]
-scale = Vector2(0.4331457, 0.4331457)
+scale = Vector2(2.0452201, 2.0452201)
 script = ExtResource("1_7k7bx")
 
-[node name="512x512CrystalsTransparent" type="Sprite2D" parent="." groups=["hazards"]]
-position = Vector2(-2, -3)
-texture = ExtResource("1_8ryga")
-hframes = 14
-vframes = 8
+[node name="Spikes" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -6.926076)
+scale = Vector2(3.1232553, 3.1232553)
+texture = ExtResource("2_7k7bx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["hazards"]]
-position = Vector2(-21.932573, -1.1543504)
+position = Vector2(0, -4.617383)
 shape = SubResource("RectangleShape2D_7k7bx")
 
 [node name="Area2D" type="Area2D" parent="." groups=["hazards"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["hazards"]]
-position = Vector2(-21.932566, -1.154335)
+position = Vector2(0, -3.4630368)
 shape = SubResource("RectangleShape2D_tggh8")

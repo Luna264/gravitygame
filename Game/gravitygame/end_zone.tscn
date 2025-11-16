@@ -1,0 +1,77 @@
+[gd_scene load_steps=8 format=3 uid="uid://b0ffiwm8d7y3i"]
+
+[ext_resource type="Script" uid="uid://bus60030q4qyt" path="res://end_zone.gd" id="1_rne62"]
+[ext_resource type="Texture2D" uid="uid://cbdreqdpfaygr" path="res://images/endzone-sheet-sheet.png" id="2_rne62"]
+
+[sub_resource type="Animation" id="Animation_x2bif"]
+resource_name = "new_animation"
+length = 0.3
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Endzone:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.102758914, 0.18771236, 0.27498448),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 3, 2]
+}
+
+[sub_resource type="Animation" id="Animation_dxp0k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Endzone:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hc7rw"]
+_data = {
+&"RESET": SubResource("Animation_dxp0k"),
+&"new_animation": SubResource("Animation_x2bif")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rne62"]
+size = Vector2(22, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x2bif"]
+size = Vector2(30, 29)
+
+[node name="endZone" type="Area2D"]
+scale = Vector2(4.449849, 4.449849)
+script = ExtResource("1_rne62")
+
+[node name="Endzone" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(0.5081962, 0.5081962)
+texture = ExtResource("2_rne62")
+hframes = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_hc7rw")
+}
+autoplay = "new_animation"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.58054054, 0.51446986)
+shape = SubResource("RectangleShape2D_rne62")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -0.5)
+scale = Vector2(0.5006011, 0.46193597)
+shape = SubResource("RectangleShape2D_x2bif")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
